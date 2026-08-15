@@ -33,7 +33,7 @@ body {
 .title {
     margin: 10px auto 0px;
     text-align: center;
-    font-size: clamp(30px,4vw,50px);
+    font-size: clamp(15px,4vw,50px);
     font-family:cursive;
     color:#ffffff;
     -webkit-text-stroke: 2px #003d48;
@@ -97,19 +97,19 @@ body {
     /* height:inherit; */
     row-gap:8px;
     column-gap:4px;
-    margin: 0 clamp(10px, 8vw, 50px) 0 clamp(10px, 8vw, 50px);
+    margin: 0 20px;
     width: calc(100% - 40px);
 }
 .alpha-btns {
     display: flex;
     justify-content: center;
-    column-gap: min(2px);
+    column-gap: 3px;
     align-items: center;
     justify-items: center;
-    font-size: clamp(12px,4vw,18px);
+    font-size: 17px;
     /* padding: 14px 14px; */
-    width: clamp(35px,9vw,45px);
-    height: clamp(35px,9vw,45px);
+    width: 42px;
+    aspect-ratio: 1;
     /* height:inherit; */
     cursor: pointer;
     border: 3px solid black;

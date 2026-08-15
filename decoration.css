@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-}
 @import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Tirra:wght@400;500;600;700;800;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
 @font-face {
@@ -14,11 +9,17 @@
     font-family: "cartoon-font2";
     src: url("Matcha\ Cih.otf");
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding:10px 0 30px;
     align-items: center;
     background:
         linear-gradient(135deg,
@@ -30,10 +31,10 @@ body {
 }
 
 .title {
-    margin: 10px 0px 0px 0px;
+    margin: 10px auto 0px;
     text-align: center;
-    font-size: clamp(2rem,5vw,3rem);
-    font-family:"cartoon-font1";
+    font-size: clamp(30px,4vw,50px);
+    font-family:cursive;
     color:#ffffff;
     -webkit-text-stroke: 2px #003d48;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
@@ -41,9 +42,9 @@ body {
 
 .container {
     position: relative;
-    margin: auto;
-    width: min(500px,90vw);
-    height: min(780px,70vh);
+    margin: 30px auto 0;
+    width: min(400px,90vw);
+    height: 550px;
     padding: 3px;
     display: flex;
     flex-direction: column;
@@ -66,19 +67,22 @@ body {
 .screen {
     width: 100%;
     /* min-height: 20vh; */
-    height:40%;
+    height:45%;
     background-color: #efe9e9;
     border-radius: 20px 20px 0 0;
+    flex-shrink: 0;
 }
 
 .guessarea {
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     /* margin: 16px auto; */
     width: 100%;
-    height: 60%;
+    height: 55%;
     border-radius: 0 0 20px 20px;
+    flex-shrink: 0;
 }
 .guessarea,
 .guessword{
@@ -90,11 +94,11 @@ body {
     grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     /* margin: 0px 50px 0px 50px; */
-    width: 100%;
-    height:inherit;
-    row-gap:10px;
+    /* height:inherit; */
+    row-gap:8px;
+    column-gap:4px;
     margin: 0 clamp(10px, 8vw, 50px) 0 clamp(10px, 8vw, 50px);
-    width: calc(100% - 2 * clamp(10px, 8vw, 50px));
+    width: calc(100% - 40px);
 }
 .alpha-btns {
     display: flex;
@@ -102,10 +106,10 @@ body {
     column-gap: min(2px);
     align-items: center;
     justify-items: center;
-    font-size: clamp(10px,8vw,20px);
+    font-size: clamp(12px,4vw,18px);
     /* padding: 14px 14px; */
-    width: clamp(35px,9vw,50px);
-    height: clamp(30px,9vw,50px);
+    width: clamp(35px,9vw,45px);
+    height: clamp(35px,9vw,45px);
     /* height:inherit; */
     cursor: pointer;
     border: 3px solid black;
@@ -138,7 +142,7 @@ body {
 }
 
 .blanks {
-    margin-top: 80px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;

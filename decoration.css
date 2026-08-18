@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Tirra:wght@400;500;600;700;800;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
 @font-face {
     font-family: "cartoon-font1";
     src: url("chicken_pie/CHICKEN\ Pie.ttf");
@@ -9,6 +10,7 @@
     font-family: "cartoon-font2";
     src: url("Matcha\ Cih.otf");
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +21,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding:10px 0 30px;
+    padding: 10px 0 30px;
     align-items: center;
     background:
         linear-gradient(135deg,
@@ -33,17 +35,17 @@ body {
 .title {
     margin: 10px auto 0px;
     text-align: center;
-    font-size: clamp(15px,4vw,50px);
-    font-family:cursive;
-    color:#ffffff;
+    font-size: clamp(15px, 4vw, 50px);
+    font-family: cursive;
+    color: #ffffff;
     -webkit-text-stroke: 2px #003d48;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .container {
     position: relative;
     margin: 30px auto 0;
-    width: min(400px,90vw);
+    width: min(400px, 90vw);
     height: 550px;
     padding: 3px;
     display: flex;
@@ -58,7 +60,7 @@ body {
     display: flex;
     justify-content: end;
     padding: 4px;
-    font-size: clamp(1.4rem,4vw,2rem);
+    font-size: clamp(1.4rem, 4vw, 2rem);
     color: black;
     position: relative;
     margin: 20px 40px 0px 0px;
@@ -67,7 +69,7 @@ body {
 .screen {
     width: 100%;
     /* min-height: 20vh; */
-    height:45%;
+    height: 45%;
     background-color: #efe9e9;
     border-radius: 20px 20px 0 0;
     flex-shrink: 0;
@@ -84,22 +86,25 @@ body {
     border-radius: 0 0 20px 20px;
     flex-shrink: 0;
 }
+
 .guessarea,
-.guessword{
+.guessword {
     background-color: #f3e8bc;
 }
+
 .guessword {
-    padding: clamp(8px,3vw,14px);
+    padding: clamp(8px, 3vw, 14px);
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     /* margin: 0px 50px 0px 50px; */
     /* height:inherit; */
-    row-gap:8px;
-    column-gap:4px;
+    row-gap: 8px;
+    column-gap: 4px;
     margin: 0 20px;
     width: calc(100% - 40px);
 }
+
 .alpha-btns {
     display: flex;
     justify-content: center;
@@ -113,32 +118,32 @@ body {
     /* height:inherit; */
     cursor: pointer;
     border: 3px solid black;
-    border-radius:9px;
+    border-radius: 9px;
     background-color: #04344c;
     color: #E0E5E9;
     font-weight: bold;
-    font-family:cursive;
+    font-family: cursive;
 }
 
 .alpha-btns:hover {
-    cursor:pointer;
-    background-color:#f3e8bc;
+    cursor: pointer;
+    background-color: #f3e8bc;
     color: black;
-    transform:scale(1.1);
+    transform: scale(1.1);
 }
 
 .alpha-btns:disabled {
-    opacity:1;
-    transform:scale(0.98);
-    cursor:not-allowed;
-    border:none;
+    opacity: 1;
+    transform: scale(0.98);
+    cursor: not-allowed;
+    border: none;
     background-color: #fffff0;
-    color:black;
+    color: black;
 }
 
 .alpha-btns:active {
     transform: scale(0.95);
-    color:black;
+    color: black;
 }
 
 .blanks {
@@ -147,22 +152,24 @@ body {
     justify-content: center;
     align-items: center;
     color: #1e1e1e;
-    font-size: clamp(1.8rem,8vw,3rem);
+    font-size: clamp(1.8rem, 8vw, 3rem);
     gap: 10px;
 }
-.blanks span{
+
+.blanks span {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .message {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(90vw,400px);
-    min-width:auto;
+    width: min(90vw, 400px);
+    min-width: auto;
     padding: 35px;
     text-align: center;
     font-family: "Inter", sans-serif;
@@ -170,13 +177,14 @@ body {
     font-weight: 700;
     color: #f5f5f5;
     background: #1e1e1e;
-    border: 2px solid rgba(255,255,255,0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     box-shadow:
-        0 20px 50px rgba(0,0,0,0.5),
-        0 0 20px rgba(99,102,241,0.3);
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(99, 102, 241, 0.3);
     animation: popup 0.3s ease;
 }
+
 @keyframes popup {
     from {
         opacity: 0;
@@ -188,6 +196,7 @@ body {
         transform: translate(-50%, -50%) scale(1);
     }
 }
+
 .reset-game button {
     margin-top: 20px;
     padding: 12px 28px;
@@ -197,17 +206,26 @@ body {
     font-size: 1.1rem;
     font-weight: 700;
     color: rgb(1, 6, 43);
-    background: linear-gradient(
-        135deg,
-        #00ff22,
-        #73f65c
-    );
+    background: linear-gradient(135deg,
+            #00ff22,
+            #73f65c);
     cursor: pointer;
     transition: all 0.25s ease;
 }
+
 .reset-game button:hover {
     transform: translateY(-3px);
 }
+
 .reset-game button:active {
     transform: scale(0.97);
 }
+
+@media (max-width:768px) {
+    .container {
+        width: 50vw;
+        height: 80vh;
+    }
+}
+/* 
+@media (max-width:1024px) {} */
